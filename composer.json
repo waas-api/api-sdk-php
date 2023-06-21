@@ -1,16 +1,15 @@
 {
-    "name": "waas-api/api-sdk-php",
-    "description": "waas api",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "WaasApi\\ApiSdkPhp\\": "src/"
-        }
-    },
-    "minimum-stability": "dev",
-    "require": {
-      "ext-http": "*",
-      "ext-json": "*"
+  "name": "waas-api/api-sdk-php",
+  "description": "waas api",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "WaasApi\\ApiSdkPhp\\": "src/"
     }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.5.0"
+  }
 }
