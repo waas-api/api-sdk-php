@@ -1,10 +1,13 @@
 
-## Client Request Method
+## Install
+
+```shell
+composer require waas-api/api-sdk-php
+```
+
+## Client Request Methods
 
 ```php
-<?php
-
-require "vendor/autoload.php";
 
 use WaasApi\ApiSdkPhp\Client;
 
@@ -64,9 +67,6 @@ try {
 ## Deposit And Withdraw Callback
 
 ```php
-<?php
-
-require "vendor/autoload.php";
 
 use WaasApi\ApiSdkPhp\Serve;
 
@@ -135,9 +135,6 @@ try {
 ## Withdraw Order Risk Control Callback
 
 ```php
-<?php
-
-require "vendor/autoload.php";
 
 use WaasApi\ApiSdkPhp\RiskControl;
 
