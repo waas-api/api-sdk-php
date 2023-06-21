@@ -5,6 +5,17 @@
 composer require waas-api/api-sdk-php
 ```
 
+## Generate Rsa Key Pair
+
+```shell
+mkdir rsa_pem && cd rsa_pem
+openssl
+OpenSSL> genrsa -out app_private_key.pem 2048 # generate private key
+OpenSSL> rsa -in app_private_key.pem -pubout -out app_public_key.pem # generate public
+key
+OpenSSL> exit
+```
+
 ## Client Request Methods
 
 ```php
@@ -41,7 +52,7 @@ t2IijEsopotRqAuWWRlkavlu5PaMAQUQ/QhEPKf9AoGAMKVtWOetz+bvFwNMtsFF
 gtMbnhLtwbX9uZ/XLpHoMgN+omhJVcRgUIm4ckZS4RnNjJ0rJUxaCYGH9U+p+exj
 D12MbAJ8tXvnEBY6IG/WCmIsZee8tJsmnHZgUgYlGFzMkup+i1YoO4RYubmCP1Ey
 P5lS63MtTlC7TP9N8sLttws=
------END PRIVATE KEY-----",
+-----END PRIVATE KEY-----", // app_private_key_pkcs8.pem content
     "platformPublicKey" => "-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2RZZISModRzproL3eTxR
 tvVK/nToDbeLmAVdmaVtHgNCwjXMeNCZvHySZKO7+t7XySzBd2PhhQjvAkDd8HRK
@@ -50,7 +61,7 @@ yI/jFN/Pj2gxD+vh5UUKU1LD2IQq/VxgtEpf8Vs6w7SvafPwYkpdPGCKUFkRvN1F
 rY2+tq0j1MRVJbB2rIunWDnT8cDUh2sWLXf4yNaJVOaaTFB0zbAk/qcoicGQyW7b
 VG7dVW8WywKmOAPeQCCQa+SJ4BhfI1k8eEAwFVRuxz/f9Ecfog9hZJ+RgELkpS8q
 hQIDAQAB
------END PUBLIC KEY-----",
+-----END PUBLIC KEY-----", // platform public key
 ];
 $client = new Client($config);
 
@@ -58,6 +69,7 @@ try {
     $resp = $client->addressGetBatch("eth"); // Get New Addresses
 //    $resp = $client->addressSyncStatus("eth", "0x6828449A5b01F7c3D281A0c06216eA9f4f188B1c", "10"); // Sync Address Status
 //    $resp = $client->transfer("eth", "0xb6dEd378Ad9Aa871c6ec5599049B1DFb7C9866a3", 0.23, "20230621164438434765", "10"); // initial a on-chain withdrawal request
+//    ...
     var_dump($resp);
 } catch (Exception $e) {
     var_dump($e->getMessage());
@@ -98,7 +110,7 @@ t2IijEsopotRqAuWWRlkavlu5PaMAQUQ/QhEPKf9AoGAMKVtWOetz+bvFwNMtsFF
 gtMbnhLtwbX9uZ/XLpHoMgN+omhJVcRgUIm4ckZS4RnNjJ0rJUxaCYGH9U+p+exj
 D12MbAJ8tXvnEBY6IG/WCmIsZee8tJsmnHZgUgYlGFzMkup+i1YoO4RYubmCP1Ey
 P5lS63MtTlC7TP9N8sLttws=
------END PRIVATE KEY-----",
+-----END PRIVATE KEY-----", // app_private_key_pkcs8.pem content
     "platformPublicKey" => "-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2RZZISModRzproL3eTxR
 tvVK/nToDbeLmAVdmaVtHgNCwjXMeNCZvHySZKO7+t7XySzBd2PhhQjvAkDd8HRK
@@ -107,7 +119,7 @@ yI/jFN/Pj2gxD+vh5UUKU1LD2IQq/VxgtEpf8Vs6w7SvafPwYkpdPGCKUFkRvN1F
 rY2+tq0j1MRVJbB2rIunWDnT8cDUh2sWLXf4yNaJVOaaTFB0zbAk/qcoicGQyW7b
 VG7dVW8WywKmOAPeQCCQa+SJ4BhfI1k8eEAwFVRuxz/f9Ecfog9hZJ+RgELkpS8q
 hQIDAQAB
------END PUBLIC KEY-----",
+-----END PUBLIC KEY-----", // platform public key
 ];
 
 $serve = new Serve($config);
@@ -166,7 +178,7 @@ ZTq5ycG3c8tCSiRIwWA+jVY0eyfew8tYaZo2PE1rAoGAB+nAq8KHWRZ3lYj1/NUZ
 JJ1uvSqSXDfSfcsY4lpe5bmuMevk3wXSQ40EkBaVXPBVm9n08POQ7V8HRCVKK0Iz
 Zesn2TBd3yuOf8VPw8s91dKMv2dku0lRBeX+QXGWlnwvFFTEfZl5nvKZsh/+3ibU
 LDt83niVyWaOR0grrb53POw=
------END PRIVATE KEY-----",
+-----END PRIVATE KEY-----", // a new risk control app_private_key_pkcs8.pem content
     "riskPlatformPublicKey" => "-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwtOCAf3sMUAJhBT/hOf9
 4JVW5ainBh1vSljqu1q+2GIzmjravp9IeSgvRgT4FQ9vcf4BXNbV3VwHOzCrKQbc
@@ -175,7 +187,7 @@ cYmi+kA3hRQ65xL/yJAz714F5N/WLy9hpnIIECAZx8NaBzilLD2QMcMZt1WRAIW6
 z7Nw5VuCdoGu6EesGSRqTXQYfFZtEM/8otkd6WiMDuswjRQUX3Js1szb4CtPmT1j
 huJtUtZQ6Mf/oY2gHB9vNONUSUu24pQi9E5CKttcFnE2PPZsOTYGyZbgPQiXVmel
 /QIDAQAB
------END PUBLIC KEY-----",
+-----END PUBLIC KEY-----", // risk platform public key  
 ];
 
 $riskControl = new RiskControl($config);
