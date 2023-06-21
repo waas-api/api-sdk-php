@@ -1,8 +1,8 @@
 {
     "name": "waas-api/api-sdk-php",
     "description": "waas api",
-    "type": "l",
-    "license": "Apache",
+    "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "WaasApi\\ApiSdkPhp\\": "src/"
