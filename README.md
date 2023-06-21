@@ -11,8 +11,8 @@ composer require waas-api/api-sdk-php
 mkdir rsa_pem && cd rsa_pem
 openssl
 OpenSSL> genrsa -out app_private_key.pem 2048 # generate private key
-OpenSSL> rsa -in app_private_key.pem -pubout -out app_public_key.pem # generate public
-key
+OpenSSL> pkcs8 -topk8 -inform PEM -in app_private_key.pem -outform PEM -nocrypt -out app_private_key_pkcs8.pem # convert private key to PKCS8 format
+OpenSSL> rsa -in app_private_key.pem -pubout -out app_public_key.pem # generate public key
 OpenSSL> exit
 ```
 
