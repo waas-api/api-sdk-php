@@ -1,0 +1,16 @@
+{
+    "name": "waas-api/api-sdk-php",
+    "description": "waas api",
+    "type": "l",
+    "license": "Apache",
+    "autoload": {
+        "psr-4": {
+            "WaasApi\\ApiSdkPhp\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+      "ext-http": "*",
+      "ext-json": "*"
+    }
+}
