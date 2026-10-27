@@ -1,0 +1,10 @@
+{
+  "fixtureSeedB64": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8=",
+  "fixturePubKeyB64": "A6EHv/POEL4dcN0Y50vAmWfk1jCbpQ1fHdyGZBJVMbg=",
+  "fixtureMessageB64": "Q29kZVZBU1AgY3Jvc3MtbGFuZ3VhZ2UgZml4dHVyZSBtZXNzYWdlAAE=",
+  "fixtureSignatureB64": "tlqmRs366BlEk8JSyz4mIQ9YXPYjSt1PNOxaVXV5HB2k8UUrKN9vDWpcUOjT2wM1Og701ATkeqTchGl1raxTDw==",
+  "fixtureReceiverSeedB64": "ICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj8=",
+  "fixtureReceiverPubKeyB64": "Kay64UG8yvCyLhqU000LxzYeUm0L/hLIl5S8kyKWbdc=",
+  "fixtureCiphertextB64": "qjBcBPP9Ddu+Vly8X2QTNBO1PHiW0OpFxMHjqtfNa4ByKJinR2n0Z1nmzgZd5e3v0J41ld2KXAyTMz0t2fgBu0bG3IcHQtnID1gg3P9OAA/q+2GAGUbEvm3B4ppXEtTOLRYWFg==",
+  "fixturePlaintext": "{\"ivms101\":{\"originatorPersons\":[],\"beneficiaryPersons\":[]}}"
+}

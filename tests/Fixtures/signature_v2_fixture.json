@@ -1,0 +1,24 @@
+{
+  "algorithm": "RSA-SHA256",
+  "private_key_pem": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCqK6hVxI3jRRsV\neMvulPmptMTzEXtpA8JeFzK03y+q0eMPF3RmOnHWgiRfjnqeMAbrwvFYIZtros/F\nj5TuEaykImO7eIOK9nJOdxfPnE2bYfXw+gQVK5XUgat50bnJ63IKFkVo1eiKF0c3\naGcxG+7I8BPxT9u7L6kj0Cofcn5b5N32BmezCPU7fNB56vCP2rQIkIpexGb54Exv\nqHnP7IzoaRds2rggVOIRRAxlgb43FNEyuMsJkUum7cLuyk92BdQ6a67ZLcvpPEyr\noEPy6aY4X2+81XYYSY7gkWUnppgGJPTI9norvB8IWAtta6pgGT/UkoqgnHx5fuwk\nXKkkuZaxAgMBAAECggEAA9vwGhvWROpvCg5ef5dgzxSyp7mEhTXo3UXk6D2sgND4\nN4ImaWAXb1Atv34FcVtw+L1HyGIgunDridUvATQk6GcAQILj5s2ee4GPaG2ow+aV\nk4Sz/X/qyrIzH5TeRAJDKI/nPJCnUKRlANBtEKvLv0JUjXMsbkMPMKj6n5Jy46YU\nWyTgfKJOB0P7Ha4Buxq+3c0xbwmvz8l4ZOmVtC/+nGUIt5w09jT6FIU+0wgNpnet\niPbkn5eKUROiIsYTzxCjAiuV8IeYiBUwE1DTwGVtJL9/F96yfMjG523cZYBMG2dj\nqlT82flRxlzBsAEoWmExjk9oRqUHdOxTOp49oCTJvQKBgQDLGiwxKpaKoZAvQVkA\nLvJSEsz8wMmbft3zM6FJ0hWs71WExobu9Zf46zC3mWehhHfs9lXtv/uUL1xZY44v\nlxQhgStaLbAxN9Ltd2ZhdS0f8DPSDncvfEcz81oqnLqxLEAmZXYaGHWX1xSqbWmn\noARVr09b2KpKAD1KpEOUja/7jQKBgQDWfcQknhmCfPxIDmRPLjqBeQw+TSH2rPRz\nm7bQm1LiJSV3lRKfHF2yEttr1JstyhxlWj140+mzvl6bNa2ev4/OkxUqD/JgUGZJ\niyQKf/Hp8GMbOmWe7ngjg6BqJjXn2ZfM7fXmvCIDIofhiVBzOGMgDspseqQyDR+s\nGm9ra/KstQKBgE4i4o+Dv+jToUHc1R2x8f3LR9uRW76bv026NjnNPhOK/A6Zxf2W\ntIHKEbMArJLCANVEK+jMrD/lPJUTLPd4GwGMzR3jZ953iIldHyEtUE/yPC167TVy\njX4aCD1OkLBqwr9C133QnSTuVQAAGd6oPCKu0EwYfeL8Vpgpu+oh3GtdAoGBALAT\nJ/vDST+kKFlibxfM5Dw6yUEvgm0EB9wLfKR8jSqVwc8LsfCpkYTIFBXNvuF046CT\n1pikpVlnMjSJeRAzQvMaLKqN0rMb7Qv8S8bOxyD6s/C7HIa+TiMhP4NEAMZmCkYx\nJcaWs/kM1KzhUwhyxnSfj65DcxyfR1u5i7OMNvdtAoGACqWqYrk5mhUcVzx1TlSg\n7Gv/82zhCdZOJ3zW8ejMnvuexeR9icKmGM2EDKfbT5HzLlsj4d5VECqZl5Quk9Dj\n4XCqBwpVkQuftXWyPblwOF1YIQEKiox0/ku8OvhwjORLmmJkJaHPBDxzE+M4hWWY\nNQFGSjU8ZCB7DNqKkmKkuD0=\n-----END PRIVATE KEY-----\n",
+  "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqiuoVcSN40UbFXjL7pT5\nqbTE8xF7aQPCXhcytN8vqtHjDxd0Zjpx1oIkX456njAG68LxWCGba6LPxY+U7hGs\npCJju3iDivZyTncXz5xNm2H18PoEFSuV1IGredG5yetyChZFaNXoihdHN2hnMRvu\nyPAT8U/buy+pI9AqH3J+W+Td9gZnswj1O3zQeerwj9q0CJCKXsRm+eBMb6h5z+yM\n6GkXbNq4IFTiEUQMZYG+NxTRMrjLCZFLpu3C7spPdgXUOmuu2S3L6TxMq6BD8umm\nOF9vvNV2GEmO4JFlJ6aYBiT0yPZ6K7wfCFgLbWuqYBk/1JKKoJx8eX7sJFypJLmW\nsQIDAQAB\n-----END PUBLIC KEY-----\n",
+  "request": {
+    "app_id": "demo-app",
+    "body": "{\"coin\":\"btc\"}",
+    "canonical": "POST\n/shopapi/v2/balance\ndemo-app\nadmin\n1785340800\n0123456789abcdef\n0fe0ec658fa6fbb82bb702e898638326531ec4bc15056d40d94bbcc6a2266575",
+    "key_version": "admin",
+    "method": "POST",
+    "nonce": "0123456789abcdef",
+    "path": "/shopapi/v2/balance",
+    "signature": "AiO7DyaDLoa7cX+kvWwZ9SGzFjA50YxsndnT/b60990lNxrlpI4aVPqGWmTvm0z7mTuDj1CndUosbTdSDa/yDmrQLbZxLQPPN4NK7JWEh0wnaj7oACswDAYEvf5o2FddUuBECIQbCK6J1ajEUdv6Jf0Cc6L35XmOr8i7/uBvkJSlrvUGCQ2M7q732UZ4952gs1a85iU4hUWG9nqnzZC+4lod8nWg7zRiSb086EO+EBod41euvrwZcVAjiDv8C0sQFi6SiAfEqD031NaNpVVc+VLXq9c79cVaQuwcyyNgtc71LWCagd3zlfHCDQ1lyYcdhkA0VNFDT9a7jsrxtotV8w==",
+    "timestamp": "1785340800"
+  },
+  "response": {
+    "algorithm": "RSA-SHA256",
+    "body": "{\"data\":{\"order_id\":\"1\",\"amount\":\"1.5\"}}",
+    "canonical": "1785340800\nabcdef0123456789\nRSA-SHA256\n631af6d41ca0da36316c0d6ad0df8e338c23a9878548d5ee6831df183e70e25e",
+    "nonce": "abcdef0123456789",
+    "signature": "gcvD6paex+8LZZdtsuZ/251TzIIrDFChucvsUWj2V+Ls6f8uwgS7WJvQxBqx+b7n4eEBwyt/oYVxxBHk1K88v3wIweyrv+dqc3e7iHDlWJNFZE8oRsjGZCEzbBr0Trc9bqJwCqMiK0uosV9xcOVy6eDbqx7l8NDYaKz/9rWpD5aF/xhgQiCSO4WzhFenkWk0cnXwLX+gFU6NM2c3hmNDvY+QexWyxLYri/PYpXhFpDt/ethCtmXSyXuhu2iIef7Ijb1u3pApe2s9Ghx2P33TIY/+YDATjv5+nhhdRJYflL99odVHQA+pYwo8oIRibsTDdyadoV7D0d4Ly8uQ0OUYhQ==",
+    "timestamp": "1785340800"
+  }
+}

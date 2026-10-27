@@ -1,0 +1,212 @@
+{
+  "trVaspList": {
+    "path": "/travelRule/vaspList",
+    "request": "TrVaspListRequest",
+    "response": "TrVaspListResponse"
+  },
+  "trVerifyAddress": {
+    "path": "/travelRule/verifyAddress",
+    "request": "TrVerifyAddressRequest",
+    "response": "TrVerifyAddressResponse"
+  },
+  "trTransfer": {
+    "path": "/travelRule/transfer",
+    "request": "TrTransferRequest",
+    "response": "TrTransferResponse"
+  },
+  "trQueryTransfer": {
+    "path": "/travelRule/queryTransfer",
+    "request": "TrQueryTransferRequest",
+    "response": "TrQueryTransferResponse"
+  },
+  "trPostTransfer": {
+    "path": "/travelRule/postTransfer",
+    "request": "TrPostTransferRequest",
+    "response": "TrPostTransferResponse"
+  },
+  "trReceiveAudit": {
+    "path": "/travelRule/receiveAudit",
+    "request": "TrReceiveAuditRequest",
+    "response": "TrReceiveAuditResponse"
+  },
+  "trRate": {
+    "path": "/travelRule/rate",
+    "request": "TrRateRequest",
+    "response": "TrRateResponse"
+  },
+  "trHotWallet": {
+    "path": "/address/hotWallet",
+    "request": "TrHotWalletRequest",
+    "response": "TrHotWalletResponse"
+  },
+  "addressGetBatch": {
+    "path": "/address/getBatch",
+    "request": "AddressGetBatchRequest",
+    "response": "AddressGetBatchResponse"
+  },
+  "addressList": {
+    "path": "/address/list",
+    "request": "AddressListRequest",
+    "response": "AddressListResponse"
+  },
+  "addressCoinAccount": {
+    "path": "/address/coinAccount",
+    "request": "AddressCoinAccountRequest",
+    "response": "AddressCoinAccountResponse"
+  },
+  "addressSyncStatus": {
+    "path": "/address/syncStatus",
+    "request": "AddressSyncStatusRequest",
+    "response": "AddressSyncStatusResponse"
+  },
+  "addressSyncBatchStatus": {
+    "path": "/address/syncBatchStatus",
+    "request": "AddressSyncBatchStatusRequest",
+    "response": "AddressSyncBatchStatusResponse"
+  },
+  "addressVerifyAddress": {
+    "path": "/address/verifyAddress",
+    "request": "AddressVerifyAddressRequest",
+    "response": "AddressVerifyAddressResponse"
+  },
+  "addressVerifyAml": {
+    "path": "/address/verifyAml",
+    "request": "AddressVerifyAmlRequest",
+    "response": "AddressVerifyAmlResponse"
+  },
+  "receiveList": {
+    "path": "/receive/list",
+    "request": "ReceiveListRequest",
+    "response": "ReceiveListResponse"
+  },
+  "balance": {
+    "path": "/balance",
+    "request": "BalanceRequest",
+    "response": "BalanceResponse"
+  },
+  "exchangeIndex": {
+    "path": "/exchange/index",
+    "request": "ExchangeIndexRequest",
+    "response": "ExchangeIndexResponse"
+  },
+  "exchangeTransfer": {
+    "path": "/exchange/transfer",
+    "request": "ExchangeTransferRequest",
+    "response": "ExchangeTransferResponse"
+  },
+  "rateExchange": {
+    "path": "/rate/exchange",
+    "request": "RateExchangeRequest",
+    "response": "RateExchangeResponse"
+  },
+  "rateExchangeBatch": {
+    "path": "/rate/exchangeBatch",
+    "request": "EmptyRequest",
+    "response": "RateExchangeBatchResponse"
+  },
+  "balanceExchange": {
+    "path": "/balance/exchange",
+    "request": "BalanceExchangeRequest",
+    "response": "BalanceExchangeResponse"
+  },
+  "exchangeCoin": {
+    "path": "/exchange/coin",
+    "request": "EmptyRequest",
+    "response": "ExchangeCoinResponse"
+  },
+  "exchangeList": {
+    "path": "/exchange/list",
+    "request": "ExchangeListRequest",
+    "response": "ExchangeListResponse"
+  },
+  "h5OrderCreate": {
+    "path": "/h5Order/create",
+    "request": "H5OrderCreateRequest",
+    "response": "H5OrderCreateResponse"
+  },
+  "h5OrderCancel": {
+    "path": "/h5Order/cancel",
+    "request": "H5OrderCancelRequest",
+    "response": "H5OrderCancelResponse"
+  },
+  "h5OrderDetail": {
+    "path": "/h5Order/detail",
+    "request": "H5OrderDetailRequest",
+    "response": "H5OrderDetailResponse"
+  },
+  "coinList": {
+    "path": "/coin/list",
+    "request": "CoinListRequest",
+    "response": "CoinListResponse"
+  },
+  "rateIndex": {
+    "path": "/rate/index",
+    "request": "RateIndexRequest",
+    "response": "RateIndexResponse"
+  },
+  "rateFiatCurrency": {
+    "path": "/rate/fiatCurrency",
+    "request": "RateFiatCurrencyRequest",
+    "response": "RateFiatCurrencyResponse"
+  },
+  "balanceTransactionFee": {
+    "path": "/balance/transactionFee",
+    "request": "BalanceTransactionFeeRequest",
+    "response": "BalanceTransactionFeeResponse"
+  },
+  "transferTransactionFee": {
+    "path": "/transfer/transactionFee",
+    "request": "TransferTransactionFeeRequest",
+    "response": "TransferTransactionFeeResponse"
+  },
+  "refundList": {
+    "path": "/refund/list",
+    "request": "RefundListRequest",
+    "response": "RefundListResponse"
+  },
+  "reconcileBalances": {
+    "path": "/reconcile/balances",
+    "request": "ReconcileBalancesRequest",
+    "response": "ReconcileBalancesResponse"
+  },
+  "reconcileAddressBalance": {
+    "path": "/reconcile/addressBalance",
+    "request": "ReconcileAddressBalanceRequest",
+    "response": "ReconcileAddressBalanceResponse"
+  },
+  "reconcileWithdrawal": {
+    "path": "/reconcile/withdrawal",
+    "request": "ReconcileWithdrawalRequest",
+    "response": "ReconcileWithdrawalResponse"
+  },
+  "outerAddressAdd": {
+    "path": "/outerAddress/add",
+    "request": "OuterAddressAddRequest",
+    "response": "OuterAddressAddResponse"
+  },
+  "outerAddressDelete": {
+    "path": "/outerAddress/delete",
+    "request": "OuterAddressDeleteRequest",
+    "response": "OuterAddressDeleteResponse"
+  },
+  "balanceGeneralAccount": {
+    "path": "/balance/generalAccount",
+    "request": "EmptyRequest",
+    "response": "BalanceGeneralAccountResponse"
+  },
+  "statisticsTransfer": {
+    "path": "/statistics/transfer",
+    "request": "StatisticsTransferRequest",
+    "response": "StatisticsTransferResponse"
+  },
+  "transfer": {
+    "path": "/transfer",
+    "request": "TransferRequest",
+    "response": "TransferResponse"
+  },
+  "transferList": {
+    "path": "/transfer/list",
+    "request": "TransferListRequest",
+    "response": "TransferListResponse"
+  }
+}

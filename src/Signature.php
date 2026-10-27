@@ -19,7 +19,6 @@ class Signature
         $privKeyId = openssl_pkey_get_private($privateKey);
         $signature = '';
         openssl_sign($signString, $signature, $privKeyId, OPENSSL_ALGO_MD5);
-        openssl_free_key($privKeyId);
         return base64_encode($signature);
     }
 
@@ -37,7 +36,6 @@ class Signature
         $toSign = self::getSignString($data);
         $publicKeyId = openssl_pkey_get_public($publicKey);
         $result = openssl_verify($toSign, base64_decode($sign), $publicKeyId, OPENSSL_ALGO_MD5);
-        openssl_free_key($publicKeyId);
         return $result === 1 ? true : false;
     }
 

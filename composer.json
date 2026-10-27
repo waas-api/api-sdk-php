@@ -8,8 +8,18 @@
       "WaasApi\\ApiSdkPhp\\": "src/"
     }
   },
-  "minimum-stability": "dev",
   "require": {
-    "php": ">=5.5.0"
+    "php": ">=5.6",
+    "ext-curl": "*",
+    "ext-openssl": "*",
+    "paragonie/random_compat": "^2.0.21",
+    "paragonie/sodium_compat": "^1.21"
+  },
+  "suggest": {
+    "ext-sodium": "Accelerates Travel Rule Ed25519 and NaCl box; sodium_compat is used without it",
+    "ext-redis": "Shared atomic callback nonce storage"
+  },
+  "scripts": {
+    "test": "php tests/run.php"
   }
 }

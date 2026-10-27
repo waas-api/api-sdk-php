@@ -1,0 +1,4 @@
+{
+  "withdraw": {"T1": {"trade_id":"T1","user_id":"u1","coin":"trx","address":"TCaseSensitiveAddress","amount":"2.00000000","review":"approve"}},
+  "exchange": {"E1": {"trade_id":"E1","user_id":"u1","source_coin":"trx","target_coin":"usdt_trc20","amount":"2.00000000","review":"approve"}}
+}

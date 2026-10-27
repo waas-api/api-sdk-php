@@ -1,0 +1,10 @@
+{
+  "/travelRule/vaspList":{"items":[{"vasp_id":"code:target","name":"Target","legal_name":"Target Ltd","country_code":"SG","status":"ACTIVE","provider":"code","provider_vasp_id":"target","alliance_name":"CODE","public_keys":[{"value":"AbCd==","expires_at":"2027-01-01T00:00:00Z"}]}],"page":1,"page_size":50,"total":1},
+  "/travelRule/verifyAddress":{"request_id":"q1","result":"valid","reason_type":"","reason_message":"","beneficiary_vasp_id":"code:target","hot_wallet_address":"TA"},
+  "/travelRule/transfer":{"transfer_id":"tr1","route_decision":"TR_CODE","result":"verified","reason_type":"","reason_message":"","beneficiary_vasp":null,"payload":"cipher"},
+  "/travelRule/queryTransfer":{"originator_vasp_id":"code:target","result":"valid","reason_type":"","reason_message":"","originator_public_key":"AbCd=="},
+  "/travelRule/postTransfer":{"transfer_id":"tr2","result":"normal","reason_type":"","reason_message":"","originator_vasp_id":"code:target","coin":"usdt_trc20","contract":"trx","amount":"2","trade_price":"2","trade_currency":"USD","is_exceeding_threshold":false,"payload":"cipher"},
+  "/travelRule/receiveAudit":{"result":"normal","reason_type":"","reason_message":""},
+  "/travelRule/rate":{"coin":"usdt_trc20","fiat_code":"SGD","source":"cbc","price":"1.3"},
+  "/address/hotWallet":{"address":"TA"}
+}

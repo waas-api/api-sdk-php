@@ -1,0 +1,78 @@
+{
+  "_comment": "data field of each v2 response, written from the gateway response structs (hbc_gateway-go feature/261015-api_v2_sign, cmd/api/response and cmd/api/handlers). Every field the gateway can emit is present, including those sent only for some merchants. null means the API returns no business data.",
+
+  "/address/getBatch": ["TXa1", "TXa2"],
+  "/address/list": {"page": 1, "max_page": 3, "count": 1, "list": [{"address": "TXa1", "user_id": "u1"}]},
+  "/address/coinAccount": "eosaccount1",
+  "/address/syncStatus": {"address": "TXa1", "coin": "trx"},
+  "/address/syncBatchStatus": {
+    "success_data": [{"address": "TXa1", "user_id": "u1", "coin": "trx"}],
+    "fail_data": [{"address": "TXa2", "user_id": "u2", "coin": "trx", "msg": "This user_id already has an assigned address", "status": "5102", "old_address": "TXa0", "owner_user_id": "u9"}]
+  },
+  "/address/verifyAddress": null,
+  "/address/verifyAml": {"chain": "trx", "address": "TXa1", "risk_code": 5001, "source": "OK_LINK", "tag": "phishing", "detail": "d", "risk_score": "20", "level": "HIGH"},
+
+  "/receive/list": {"page": 1, "count": 1, "max_page": 1, "list": [{
+    "order_id": "R1", "coin": "usdt_trc20", "chain": "trx", "txid": "tx1", "confirm_count": "20", "total": "1.5",
+    "address": "TXa1", "from_address": "TFrom", "status": "1", "time": "1785297600", "type": "2", "user_id": "u1",
+    "is_black": 1, "black_tag": "phishing", "black_source": "OK_LINK", "black_score": "20", "black_level": "HIGH"
+  }]},
+  "/balance": {"chain_hot_amount": "10", "amount": "8", "freeze_amount": "2", "total": "10", "waiting_collect_amount": "1", "confirmed_waiting_collection_amount": "0.5"},
+
+  "/transfer": {"trade_id": "T1"},
+  "/transfer/list": {"page": 1, "max_page": 1, "count": 1, "list": [{
+    "trade_id": "T1", "coin": "usdt_trc20", "chain": "trx", "txid": "tx1", "amount": "1", "fee": "0.1", "gas_fee": "0.01",
+    "total": "1.1", "address": "TTo", "from_address": "THot", "status": "1", "memo": "m", "time": "1785297600", "type": "2"
+  }]},
+
+  "/exchange/index": {"trade_id": "E1"},
+  "/exchange/transfer": null,
+  "/rate/exchange": {"rate": "0.98", "max": "1000", "min": "1", "source_unit": "6", "base_coin": "usdt"},
+  "/rate/exchangeBatch": [{"source_coin": "trx", "target_coin": "usdt_trc20", "rate": 0.12, "max": "1000", "min": "1", "source_unit": 6, "base_coin": "usdt"}],
+  "/balance/exchange": [{"coin": "usdt", "amount": 1.5, "freeze_amount": 0.5, "total": 2}],
+  "/exchange/coin": [{"source_coin": "trx", "target_coin": "usdt_trc20", "source_min_amount": "1", "source_max_amount": "1000", "source_unit": "6", "target_unit": "6"}],
+  "/exchange/list": {"page": 1, "max_page": 1, "count": 1, "list": [{
+    "order_id": "O1", "trade_id": "E1", "user_id": "u1", "source_coin": "trx", "target_coin": "usdt_trc20",
+    "source_amount": "10", "source_success_amount": "10", "source_failed_amount": "0", "target_amount": "1.2",
+    "limit_price": "0", "type": "1", "exchange_fee": "0.01", "exchange_rate": "0.12", "status": "1", "time": "1785297600"
+  }]},
+
+  "/h5Order/create": {
+    "order_no": "H1", "merchant_order_id": "M1", "amount": "10.5", "currency": "usd", "status": 0,
+    "created_at": 1785297600, "expires_at": 1785301200,
+    "addresses": [{"coin": "usdt_trc20", "address": "TPay", "amount": "10.5", "blockchain": "TRON"}],
+    "return_url": "https://merchant/return", "checkout_url": "https://checkout/H1"
+  },
+  "/h5Order/cancel": null,
+  "/h5Order/detail": {
+    "order_no": "H1", "merchant_order_id": "M1", "amount": "10.5", "currency": "usd", "status": 1,
+    "created_at": 1785297600, "expires_at": 1785301200,
+    "addresses": [{"coin": "usdt_trc20", "address": "TPay", "amount": "10.5", "blockchain": "TRON"}],
+    "payments": [{"coin": "usdt_trc20", "address": "TPay", "txid": "tx1", "amount": "10.5", "confirm_time": 1785297700, "status": 1, "check_status": 0}],
+    "return_url": "https://merchant/return"
+  },
+
+  "/outerAddress/add": {"fail_addresses": ["TBad"]},
+  "/outerAddress/delete": null,
+
+  "/balance/generalAccount": [{"coin": "trx", "receive_amount": "100", "send_amount": "40", "hot_address_amount": "60", "settlement_amount": "30", "wait_settlement_amount": "10"}],
+  "/statistics/transfer": {"success_send_count": 12, "success_receive_count": 34},
+
+  "/coin/list": {"page": 1, "max_page": 1, "count": 1, "list": [{
+    "coin": "usdt_trc20", "chain": "trx", "status": "1", "open_in": 1, "open_out": 1, "open_address": "1",
+    "confirm_count": "20", "min_transfer_in_amount": "1", "min_transfer_out_amount": "1", "contract_address": "TR7"
+  }]},
+  "/rate/index": {"rate": "0.12"},
+  "/rate/fiatCurrency": {"rate": "7.1", "source_coin": "usdt", "target_currency": "cny"},
+  "/balance/transactionFee": {"fee": "0.5", "coin": "usdt_trc20", "order_num": "3"},
+  "/transfer/transactionFee": [{"coin": "usdt_erc20", "fee": "0.002", "unit": "eth"}],
+  "/refund/list": {"page": 1, "page_size": 20, "max_page": 1, "count": 1, "list": [{
+    "created_at": 1785297600, "order_id": "RF1", "coin": "usdt_trc20", "contract": "trx", "txid": "tx2",
+    "from_address": "TUser", "to_address": "TSource", "method": 0, "contract_address": "TR7",
+    "receive_order_id": "R1", "receive_txid": "tx1", "receive_amount": "5", "refund_amount": "4.9", "gas_fee": "0.1",
+    "type": 0, "status": 1, "remark": "r", "end_time": 1785297700, "block_time": 1785297690, "block_number": 123, "creator": "admin"
+  }]},
+  "/reconcile/balances": {"list": [{"chain": "trx", "coin": "trx", "ledger_balance": "10", "onchain_balance": "10", "difference": "0", "matched": true, "note": ""}]},
+  "/reconcile/addressBalance": {"list": [{"chain": "trx", "coin": "trx", "address": "TXa1", "matched": false, "ledger_balance": "10", "onchain_balance": "9", "difference": "1", "note": "n"}]},
+  "/reconcile/withdrawal": {"list": [{"trade_id": "T1", "chain": "trx", "coin": "trx", "from_address": "THot", "to_address": "TTo", "txid": "tx1", "matched": true, "ledger_amount": "1", "onchain_amount": "1", "difference": "0", "note": ""}]}
+}
